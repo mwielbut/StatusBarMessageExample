@@ -5,7 +5,7 @@ An example project for creating a secondary status bar on an IOS app for display
 
 The additional status bar can be controlled to show/hide when required and appears directly underneath the existing one. We find it very useful for displaying network status notifications in our App.
 
-This is an alternative to the other popular option of overlaying a custom status bar on top of the existing one.
+This is an alternative to  overlaying a custom status bar on top of the existing one.
 * [kgstatusbar](http://www.cocoacontrols.com/controls/kgstatusbar)
 * [twstatus](http://www.cocoacontrols.com/controls/twstatus)
 
@@ -62,13 +62,13 @@ Supports multiple orientations.
 
  * Thanks to Tommy Sadler for the great [blurred backgrounds](http://dribbble.com/shots/1082688-15-Free-Blurred-Backgrounds-Bonus-Wallpapers)
 
- ## License
+## License
 
 MIT License (MIT)
 
 ## Disclaimer
 
-This code is provided with very limited testing on a single device (IOS 6). Feel free to customize to support other status colors or locations. 
+This code is provided with very limited testing on a single device (iPhone 5 running IOS 6). Feel free to customize to support other status colors or locations. 
 
 
 
