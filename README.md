@@ -3,6 +3,8 @@ StatusBarMessageExample
 
 A example project for creating a secondary status bar on an IOS app for displaying user status messages.
 
+The additional status bar can be controlled to show/hide when required. We find it very useful for displaying network status notifications in our App.
+
 The functionality is encapsulated within a single container view controller <code>StatusBarController</code> which is designed to be a simple **drop-in** wrapper for your root controller.
 
 ![Screenshot (Hidden)](/status_hidden.png "Hidden")
