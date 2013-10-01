@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C37FD10E17FAC6CF00D40C34 /* background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C37FD0FF17FAC6CF00D40C34 /* background@2x.png */; };
+		C37FD11F17FACDD600D40C34 /* buttonHighlight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C37FD11D17FACDD500D40C34 /* buttonHighlight@2x.png */; };
+		C37FD12017FACDD600D40C34 /* button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C37FD11E17FACDD600D40C34 /* button@2x.png */; };
 		C3F6D4EA17F9D6620095AF43 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3F6D4E917F9D6620095AF43 /* UIKit.framework */; };
 		C3F6D4EC17F9D6620095AF43 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3F6D4EB17F9D6620095AF43 /* Foundation.framework */; };
 		C3F6D4EE17F9D6620095AF43 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3F6D4ED17F9D6620095AF43 /* CoreGraphics.framework */; };
@@ -16,9 +19,14 @@
 		C3F6D4FC17F9D6620095AF43 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = C3F6D4FB17F9D6620095AF43 /* Default.png */; };
 		C3F6D4FE17F9D6620095AF43 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C3F6D4FD17F9D6620095AF43 /* Default@2x.png */; };
 		C3F6D50017F9D6620095AF43 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C3F6D4FF17F9D6620095AF43 /* Default-568h@2x.png */; };
+		C3F6D50817F9D6B70095AF43 /* StatusBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3F6D50717F9D6B70095AF43 /* StatusBarController.m */; };
+		C3F6D50B17F9DDB90095AF43 /* MyController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3F6D50A17F9DDB90095AF43 /* MyController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C37FD0FF17FAC6CF00D40C34 /* background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background@2x.png"; sourceTree = "<group>"; };
+		C37FD11D17FACDD500D40C34 /* buttonHighlight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "buttonHighlight@2x.png"; sourceTree = "<group>"; };
+		C37FD11E17FACDD600D40C34 /* button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button@2x.png"; sourceTree = "<group>"; };
 		C3F6D4E617F9D6620095AF43 /* StatusBarMessageExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StatusBarMessageExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3F6D4E917F9D6620095AF43 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C3F6D4EB17F9D6620095AF43 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -32,6 +40,10 @@
 		C3F6D4FB17F9D6620095AF43 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		C3F6D4FD17F9D6620095AF43 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		C3F6D4FF17F9D6620095AF43 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		C3F6D50617F9D6B70095AF43 /* StatusBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusBarController.h; sourceTree = "<group>"; };
+		C3F6D50717F9D6B70095AF43 /* StatusBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatusBarController.m; sourceTree = "<group>"; };
+		C3F6D50917F9DDB90095AF43 /* MyController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyController.h; sourceTree = "<group>"; };
+		C3F6D50A17F9DDB90095AF43 /* MyController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +92,10 @@
 			children = (
 				C3F6D4F817F9D6620095AF43 /* AppDelegate.h */,
 				C3F6D4F917F9D6620095AF43 /* AppDelegate.m */,
+				C3F6D50917F9DDB90095AF43 /* MyController.h */,
+				C3F6D50A17F9DDB90095AF43 /* MyController.m */,
+				C3F6D50617F9D6B70095AF43 /* StatusBarController.h */,
+				C3F6D50717F9D6B70095AF43 /* StatusBarController.m */,
 				C3F6D4F017F9D6620095AF43 /* Supporting Files */,
 			);
 			path = StatusBarMessageExample;
@@ -88,6 +104,7 @@
 		C3F6D4F017F9D6620095AF43 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C3F6D50C17F9DE570095AF43 /* Images */,
 				C3F6D4F117F9D6620095AF43 /* StatusBarMessageExample-Info.plist */,
 				C3F6D4F217F9D6620095AF43 /* InfoPlist.strings */,
 				C3F6D4F517F9D6620095AF43 /* main.m */,
@@ -97,6 +114,16 @@
 				C3F6D4FF17F9D6620095AF43 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C3F6D50C17F9DE570095AF43 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				C37FD11D17FACDD500D40C34 /* buttonHighlight@2x.png */,
+				C37FD11E17FACDD600D40C34 /* button@2x.png */,
+				C37FD0FF17FAC6CF00D40C34 /* background@2x.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,6 +181,9 @@
 				C3F6D4FC17F9D6620095AF43 /* Default.png in Resources */,
 				C3F6D4FE17F9D6620095AF43 /* Default@2x.png in Resources */,
 				C3F6D50017F9D6620095AF43 /* Default-568h@2x.png in Resources */,
+				C37FD10E17FAC6CF00D40C34 /* background@2x.png in Resources */,
+				C37FD11F17FACDD600D40C34 /* buttonHighlight@2x.png in Resources */,
+				C37FD12017FACDD600D40C34 /* button@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -166,6 +196,8 @@
 			files = (
 				C3F6D4F617F9D6620095AF43 /* main.m in Sources */,
 				C3F6D4FA17F9D6620095AF43 /* AppDelegate.m in Sources */,
+				C3F6D50817F9D6B70095AF43 /* StatusBarController.m in Sources */,
+				C3F6D50B17F9DDB90095AF43 /* MyController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +312,7 @@
 				C3F6D50517F9D6620095AF43 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
