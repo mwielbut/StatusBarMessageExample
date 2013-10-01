@@ -1,19 +1,23 @@
 StatusBarMessageExample
 =======================
 
-A example project for creating a secondary status bar on an IOS app for displaying user status messages.
+An example project for creating a secondary status bar on an IOS app for displaying custom app status messages.
 
-The additional status bar can be controlled to show/hide when required. We find it very useful for displaying network status notifications in our App.
+The additional status bar can be controlled to show/hide when required and appears directly underneath the existing one. We find it very useful for displaying network status notifications in our App.
+
+This is an alternative to the other popular option of overlaying a custom status bar on top of the existing one.
+* [kgstatusbar](http://www.cocoacontrols.com/controls/kgstatusbar)
+* [twstatus](http://www.cocoacontrols.com/controls/twstatus)
+
+
+## Overview
 
 The functionality is encapsulated within a single container view controller <code>StatusBarController</code> which is designed to be a simple **drop-in** wrapper for your root controller.
+Supports multiple orientations.
 
 ![Screenshot (Hidden)](/status_hidden.png "Hidden")
 
 ![Screenshot (Visible)](/status_showing.png "Visible")
-
-## License
-
-MIT License (MIT)
 
 
 ## Usage
@@ -58,4 +62,15 @@ MIT License (MIT)
 
  * Thanks to Tommy Sadler for the great [blurred backgrounds](http://dribbble.com/shots/1082688-15-Free-Blurred-Backgrounds-Bonus-Wallpapers)
 
- 
+ ## License
+
+MIT License (MIT)
+
+## Disclaimer
+
+This code is provided with very limited testing on a single device (IOS 6). Feel free to customize to support other status colors or locations. 
+
+
+
+
+
