@@ -21,12 +21,33 @@
  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  THE SOFTWARE.
  
- */
+*/
 
 #import <UIKit/UIKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@class StatusBarController;
 
-@property (strong, nonatomic) UIWindow *window;
+@protocol StatusBarControllerDelegate <NSObject>
+@optional
+- (void)statusBarController:(StatusBarController *)controller didShowStatusBar:(BOOL)visible animated:(BOOL)animated;
+- (void)statusBarController:(StatusBarController *)controller willShowStatusBar:(BOOL)visible animated:(BOOL)animated;
+@end
+
+
+
+@interface StatusBarController : UIViewController
+
+@property (nonatomic,readonly) BOOL visiblity;
+
+@property (nonatomic) UIViewController * rootViewController;
+@property (nonatomic, weak) id<StatusBarControllerDelegate> delegate;
+
+- (id)initWithRootViewController:(UIViewController *)rootViewController;
+
+- (void) setStatusMessage:(NSString *) text;
+
+- (void) setVisibility:(BOOL) visible animated:(BOOL)animated;
+
+- (void) setVisibility:(BOOL) visible withMessage:(NSString *) text animated:(BOOL)animated;
 
 @end
