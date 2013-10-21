@@ -10,7 +10,7 @@ This is an alternative to  overlaying a custom status bar on top of the existing
 * [twstatus](http://www.cocoacontrols.com/controls/twstatus)
 
 
-Side note: If you happen to have a status bar message is too long to fit, I recommend taking a look at Charles Powell's [Marquee Label](https://github.com/cbpowell/MarqueeLabel) which will scroll any label text that is too long to fit (similar to a ticker tape). It's very easy to drop-in.
+Side note: If you happen to have a status bar message that is too long to fit, I recommend taking a look at Charles Powell's [Marquee Label](https://github.com/cbpowell/MarqueeLabel) which will scroll any label text that is too long (similar to a ticker tape). It's very easy to drop-in.
 
 
 ## Overview
