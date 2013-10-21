@@ -10,6 +10,9 @@ This is an alternative to  overlaying a custom status bar on top of the existing
 * [twstatus](http://www.cocoacontrols.com/controls/twstatus)
 
 
+Side note: If you happen to have a status bar message is too long to fit, I recommend taking a look at Charles Powell's [Marquee Label](https://github.com/cbpowell/MarqueeLabel) which will scroll any label text that is too long to fit (similar to a ticker tape). It's very easy to drop-in.
+
+
 ## Overview
 
 The functionality is encapsulated within a single container view controller <code>StatusBarController</code> which is designed to be a simple **drop-in** wrapper for your root controller.
@@ -18,6 +21,7 @@ Supports multiple orientations.
 ![Screenshot (Hidden)](/status_hidden.png "Hidden")
 
 ![Screenshot (Visible)](/status_showing.png "Visible")
+
 
 
 ## Usage
@@ -58,6 +62,12 @@ Supports multiple orientations.
         - (void) setVisibility:(BOOL) visible animated:(BOOL)animated;
         - (void) setVisibility:(BOOL) visible withMessage:(NSString *) text animated:(BOOL)animated;
 
+1. Styles
+
+The controller comes in 2 styles, controlled by the <code>overlayStyle</code> property: 
+ * The default value is NO and will cause the new status bar to insert itself between the existing status bar and the app content, forcing the app content view to shrink in size by the same amount.
+ * By setting it to YES, the new status bar will appar ON TOP of the app content.
+
 ## Thanks 
 
  * Thanks to Tommy Sadler for the great [blurred backgrounds](http://dribbble.com/shots/1082688-15-Free-Blurred-Backgrounds-Bonus-Wallpapers)
@@ -70,6 +80,11 @@ MIT License (MIT)
 
 This code is provided with very limited testing on a single device (iPhone 5 running IOS 6). Feel free to customize to support other status colors or locations. 
 
+
+## Changes
+
+ * Oct 21, 2013 - Added optional functionality for the status bar to appear ON TOP of the app content view rather than pushing it down.
+ 
 
 
 
