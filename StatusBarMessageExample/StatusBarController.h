@@ -39,6 +39,12 @@
 
 @property (nonatomic,readonly) BOOL visiblity;
 
+/* overlayStyle
+ * When set to YES, the new status bar will appear over the content, under the existing status bar.
+ * Default is NO - the new status bar will push the existing content down.
+ */
+@property (nonatomic) BOOL overlayStyle;
+
 @property (nonatomic) UIViewController * rootViewController;
 @property (nonatomic, weak) id<StatusBarControllerDelegate> delegate;
 

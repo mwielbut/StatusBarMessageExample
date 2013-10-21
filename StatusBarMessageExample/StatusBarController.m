@@ -47,6 +47,7 @@
         _statusBarLabel = [UILabel new];
         
         _visiblity = NO;
+        _overlayStyle = NO;
     }
     
     return self;
@@ -149,7 +150,11 @@
     [self setVisibility:visible animated:animated];
 }
 
-
+- (void)setOverlayStyle:(BOOL)overlayStyle
+{
+    _overlayStyle = overlayStyle;
+    [self viewWillLayoutSubviews];
+}
 
 
 #pragma mark - Private methods
@@ -163,7 +168,7 @@
 {
     CGRect frame = self.view.bounds;
     
-    if(_visiblity)
+    if(_visiblity && !_overlayStyle)
     {
         frame.size.height -= STATUS_BAR_HEIGHT;
         frame.origin.y += STATUS_BAR_HEIGHT;

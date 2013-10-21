@@ -31,8 +31,11 @@
 @property (nonatomic) UIButton * button2;
 @property (nonatomic) UIButton * button3;
 @property (nonatomic) UIButton * button4;
-@property (nonatomic) UILabel* label1;
-@property (nonatomic) UILabel* label2;
+@property (nonatomic) UIButton * overlaySwitch;
+
+@property (nonatomic) UILabel * label1;
+@property (nonatomic) UILabel * label2;
+
 
 @end
 
@@ -65,7 +68,7 @@
     
     _button1 = [MyController generateButtonWithTitle:@"Show"];
     
-    [_button1 addTarget:self action:@selector(show) forControlEvents:UIControlEventTouchUpInside];
+    [_button1 addTarget:self action:@selector(show:) forControlEvents:UIControlEventTouchUpInside];
     
     [self.view addSubview:_button1];
     
@@ -73,7 +76,7 @@
     
     _button2 = [MyController generateButtonWithTitle:@"Hide"];
     
-    [_button2 addTarget:self action:@selector(hide) forControlEvents:UIControlEventTouchUpInside];
+    [_button2 addTarget:self action:@selector(hide:) forControlEvents:UIControlEventTouchUpInside];
     
     [self.view addSubview:_button2];
     
@@ -81,7 +84,7 @@
     
     _button3 = [MyController generateButtonWithTitle:@"Toggle Animated"];
     
-    [_button3 addTarget:self action:@selector(toggleAnimated) forControlEvents:UIControlEventTouchUpInside];
+    [_button3 addTarget:self action:@selector(toggleAnimated:) forControlEvents:UIControlEventTouchUpInside];
     
     [self.view addSubview:_button3];
     
@@ -89,10 +92,17 @@
     
     _button4 = [MyController generateButtonWithTitle:@"Long Message"];
     
-    [_button4 addTarget:self action:@selector(toggleLongMessage) forControlEvents:UIControlEventTouchUpInside];
+    [_button4 addTarget:self action:@selector(toggleLongMessage:) forControlEvents:UIControlEventTouchUpInside];
     
     [self.view addSubview:_button4];
     
+    
+    
+    _overlaySwitch = [MyController generateButtonWithTitle:@"Toggle Style"];
+    
+    [_overlaySwitch addTarget: self action: @selector(toggleOverlayStyle:) forControlEvents:UIControlEventTouchUpInside];
+
+    [self.view addSubview:_overlaySwitch];
     
     
     _label1 = [UILabel new];
@@ -128,36 +138,44 @@
     _button2.frame = CGRectMake(buttonX, self.view.bounds.origin.y + 60, buttonWidth, buttonHeight);
     _button3.frame = CGRectMake(buttonX, self.view.bounds.origin.y + 110, buttonWidth, buttonHeight);
     _button4.frame = CGRectMake(buttonX, self.view.bounds.origin.y + 160, buttonWidth, buttonHeight);
+    _overlaySwitch.frame = CGRectMake(buttonX, self.view.bounds.origin.y + 210, buttonWidth, buttonHeight);
     
-    _label1.frame = CGRectMake(5, self.view.bounds.origin.y + 210, self.view.bounds.size.width - 10, 40);
-    _label2.frame = CGRectMake(5, self.view.bounds.origin.y + 260, self.view.bounds.size.width - 10, 40);
+    _label1.frame = CGRectMake(5, self.view.bounds.origin.y + 260, self.view.bounds.size.width - 10, 40);
+    _label2.frame = CGRectMake(5, self.view.bounds.origin.y + 310, self.view.bounds.size.width - 10, 40);
+    
+    
 }
 
 
 
 #pragma mark - Button Actions
 
-- (void)show
+- (IBAction)show: (id) sender
 {
     [_statusBarController setStatusMessage:@"Simple Status"];
     [_statusBarController setVisibility:YES animated:NO];
 }
 
-- (void)hide
+- (IBAction)hide: (id) sender
 {
     [_statusBarController setVisibility:NO animated:NO];
 }
 
-- (void)toggleAnimated
+- (IBAction)toggleAnimated: (id) sender
 {
     BOOL newVisibility = !_statusBarController.visiblity;
     [_statusBarController setVisibility:newVisibility withMessage:@"Animated Status" animated:YES];
 }
 
-- (void)toggleLongMessage
+- (IBAction)toggleLongMessage: (id) sender
 {
     BOOL newVisibility = !_statusBarController.visiblity;
     [_statusBarController setVisibility:newVisibility withMessage:@"I am too long to fit in this space and may get cut off" animated:YES];
+}
+
+- (IBAction) toggleOverlayStyle: (id) sender
+{
+    _statusBarController.overlayStyle =  !_statusBarController.overlayStyle;
 }
 
 
