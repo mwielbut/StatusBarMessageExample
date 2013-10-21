@@ -64,9 +64,9 @@ Supports multiple orientations.
 
 1. Styles
 
-        The controller comes in 2 styles, controlled by the <code>overlayStyle</code> property: 
-         * The default value is NO and will cause the new status bar to insert itself between the existing status bar and the app content, forcing the app content view to shrink in size by the same amount.
-         * By setting it to YES, the new status bar will appar ON TOP of the app content.
+The controller comes in 2 styles, controlled by the <code>overlayStyle</code> property: 
+ * The default value is NO and will cause the new status bar to insert itself between the existing status bar and the app content, forcing the app content view to shrink in size by the same amount.
+ * By setting it to YES, the new status bar will appar ON TOP of the app content.
 
 ## Thanks 
 
