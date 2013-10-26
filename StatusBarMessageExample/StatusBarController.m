@@ -43,9 +43,6 @@
 {
     if ((self=[super init]))
     {
-        _statusBar = [UIView new];
-        _statusBarLabel = [UILabel new];
-        
         _visiblity = NO;
         _overlayStyle = NO;
     }
@@ -64,11 +61,15 @@
 
 - (void)loadView
 {
-    [super loadView];
-    
     self.view = [UIView new];
-    [self.view addSubview:_rootViewController.view];    
+    
+    [self.view addSubview:_rootViewController.view];
+    
+    _statusBar = [UIView new];
     [self.view addSubview:_statusBar];
+    
+    _statusBarLabel = [UILabel new];
+    [_statusBar addSubview:_statusBarLabel];
 }
 
 - (void)viewDidLoad
@@ -84,8 +85,6 @@
     _statusBarLabel.textAlignment = NSTextAlignmentCenter;
     _statusBarLabel.numberOfLines = 0;
     _statusBarLabel.lineBreakMode = NSLineBreakByTruncatingTail;
-
-    [_statusBar addSubview:_statusBarLabel];
 }
 
 - (void)viewWillLayoutSubviews
